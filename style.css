@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*box sizing e verdiğimiz değer ile padding ve margin değerleri eşit verilebiliyor.*/
+
+body {
+    background-image: url(software-developer-ge60827bee_1280.jpg);
+    backdrop-filter: blur(1px);
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+
+/*Burada arkaplan resmimize blur luk verdik.*/
+
+.menu-bar {
+    background: #808e9b;
+    text-align: center;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    /*bu özellikle ortaladığımız menulerimizi yanyana getirmiş oluruz.*/
+    list-style: none;
+    /*none yaparak burayı listenin başına konulan nokta özelliğini kaldırdık.*/
+}
+
+.menu-bar ul li {
+    width: 150px;
+    margin: 15px;
+    /*genişlik veri menulerin arasındaki mesafeyi biraz açtık*/
+    padding: 15px;
+    /*padding ile üst sağ sol uzaklıklarını ayarlarız.*/
+}
+
+.menu-bar ul li a {
+    /* Burada a etiketinin menulere verdiği alt çizgiyi yok ediyoruz.*/
+    text-decoration: none;
+    color: #fff;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: #485460;
+    border-radius: 10px;
+}
+
+.menu-bar .fas {
+    margin-right: 8px;
+}
+
+.sub-menu-1 {
+    display: none;
+    /*Alt menu kapalı burada*/
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    /*Fare gelince üzerine görünür alt menü*/
+    position: absolute;
+    /*Bu özellik ile sadece olduğu divi kapsar*/
+    background: #808e9b;
+    margin-top: 15px;
+    /*Yukarıdaki menüden uzaklaştırırız.*/
+    margin-left: -15px;
+    font-size: 12px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    /*Bununla yanyana olan menuler altalata gelir.*/
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    /*Alt çizgi veriyoruz buradan*/
+    background: transparent;
+    text-align: left;
+    border-radius: 0;
+    cursor: pointer;
+    /*Burada üzerine gidince fare imleci değişir.*/
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #7f8c8d;
+}
+
+.fa-caret-right {
+    font-size: 14px;
+    color: #fff;
+    float: right;
+    /*Float right ile sağa yasladık okları*/
+}
+
+
+/*Alt menü yaparken önce saklıcaz sonra hover ile görünür yapıcaz.*/
+
+.sub-menu-2 {
+    display: none;
+}
+
+.hover-me:hover .sub-menu-2 {
+    position: absolute;
+    /*OLduğu divin özelliklerini alır*/
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    /*Alt menüyü hizalıyoruz.*/
+    background: #808e9b;
+}
